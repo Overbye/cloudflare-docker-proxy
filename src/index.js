@@ -1,4 +1,4 @@
-addEventListener("fetch", (event) => {
+addEventListener("fetch"， (event) => {
   event.passThroughOnException();
   event.respondWith(handleRequest(event.request));
 });
@@ -7,7 +7,7 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  "docker.libcuda.so": dockerHub,
+  "docker.axz.me": dockerHub,
   "quay.libcuda.so": "https://quay.io",
   "gcr.libcuda.so": "https://gcr.io",
   "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
@@ -17,7 +17,7 @@ const routes = {
   "ecr.libcuda.so": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.libcuda.so": dockerHub,
+  "docker-staging.axz.me": dockerHub,
 };
 
 function routeByHosts(host) {
